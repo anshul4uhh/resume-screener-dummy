@@ -36,8 +36,7 @@ async def analyze_resume(
 ):
     try:
         # Save uploaded resume temporarily
-        file_location = f"resumes/{resume.filename}"
-        os.makedirs("resumes", exist_ok=True)
+        file_location = f"/tmp/{resume.filename}"
         with open(file_location, "wb") as f:
             f.write(await resume.read())
 

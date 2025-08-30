@@ -1,10 +1,7 @@
 import google.generativeai as genai
 import os
 import json
-from dotenv import load_dotenv
 
-# 🔐 Load API key securely
-load_dotenv()
 genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
 
 # ⚙️ Model Configuration (lower temperature for consistent scoring)
