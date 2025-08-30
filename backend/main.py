@@ -2,7 +2,7 @@ from fastapi import FastAPI, UploadFile, Form
 from fastapi.middleware.cors import CORSMiddleware
 import fitz  # PyMuPDF
 import os
-from analyze_pdf import analyse_resume_gemini
+from .analyze_pdf import analyse_resume_gemini
 
 app = FastAPI(title="Resume Analyzer API")
 
