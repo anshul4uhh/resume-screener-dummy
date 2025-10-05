@@ -2,6 +2,12 @@ import google.generativeai as genai
 import os
 import json
 
+from dotenv import load_dotenv
+
+
+load_dotenv()
+
+
 genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
 
 # ⚙️ Model Configuration (lower temperature for consistent scoring)
@@ -15,7 +21,7 @@ configuration = {
 
 # 🚀 Use Gemini 1.5 Pro for better structured reasoning
 model = genai.GenerativeModel(
-    model_name="models/gemini-2.5-flash",
+    model_name="gemini-2.5-flash",
     generation_config=configuration
 )
 
